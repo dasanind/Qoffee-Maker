@@ -101,13 +101,15 @@ jobs:
           platforms: linux/arm/v7
       - name: Build and push Docker image AMD
         id: build-and-push-amd
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v6
+        # uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
           push: true
           tags: ${{ steps.meta-amd.outputs.tags }}
           labels: ${{ steps.meta-amd.outputs.labels }}
           file: DockerfileAmd64
+          platforms: linux/amd64
       # - name: Build and push Docker image ARM64
       #   id: build-and-push-arm
       #   uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
