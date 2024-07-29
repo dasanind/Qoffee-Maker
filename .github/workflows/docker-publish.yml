@@ -33,9 +33,14 @@ jobs:
       # Install the cosign tool except on PR
       # https://github.com/sigstore/cosign-installer
       - name: Install cosign
-        uses: sigstore/cosign-installer@1e95c1de343b5b0c23352d6417ee3e48d5bcd422
+        uses: sigstore/cosign-installer@v3.5.0
         with:
-          cosign-release: "v1.4.0"
+          cosign-release: 'v2.2.4'
+      - name: Check install!
+        run: cosign version
+        # uses: sigstore/cosign-installer@1e95c1de343b5b0c23352d6417ee3e48d5bcd422
+        # with:
+        #   cosign-release: "v1.4.0"
 
       # Workarounds
       # Workaround: https://github.com/docker/buildx/issues/495
