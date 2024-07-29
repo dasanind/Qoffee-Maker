@@ -75,7 +75,6 @@ Quandl==3.6.1
 requests==2.26.0
 requests-ntlm==1.1.0
 retworkx==0.10.2
-setuptools==68.0.0
 scikit-learn==1.0.1
 scipy==1.7.1
 Send2Trash==1.8.0
